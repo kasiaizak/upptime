@@ -11,13 +11,8 @@ sites:
     url: https://floorislava.dev/
   - name: Nestry
     url: https://nestry.pl/
-  - name: Kasia Izak - wizytówka
-    url: https://www.kasiaizak.pl/
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  - name: WoPloo
+    url: https://woploo.com/
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
@@ -33,6 +28,15 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+
+  workflowSchedule:
+    graphs: "0 0 * * *"
+    responseTime: "0 23 * * *"
+    staticSite: "0 1 * * *"
+    summary: "0 0 * * *"
+    updateTemplate: "0 0 * * *"
+    updates: "0 3 * * *"
+    uptime: "*/5 * * * *"
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
